@@ -1,0 +1,35 @@
+<!-- setting buttons and adding functionality of hiding/showing div of books,
+characters and houses -->
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 col-lg-3 col-md-3 sidenav">
+      <h3>Chooose Books/characters/Houses</h3>
+      <button type="button" class="btn btn-primary font_change" ng-click="hidingFn('book')">
+        <span class="glyphicon glyphicon-book"></span>
+        Books</button><br><br>
+      <button type="button" class="btn btn-primary font_change" ng-click="hidingFn('characters')">
+        <span class="glyphicon glyphicon-user"></span>
+        Characters</button><br><br>
+      <button type="button" class="btn btn-primary font_change" ng-click="hidingFn ('houses')">
+         <span class="glyphicon glyphicon-home"></span>
+         Houses</button><br><br>
+      <h3>Apply Filters</h3>
+      <button type="button" class="btn btn-primary font_change" ng-click="sortAsc()">
+        <span class="glyphicon glyphicon-filter"></span>
+        Sort Ascending</button><br><br>
+      <button type="button" class="btn btn-primary font_change" ng-click="sortDesc()">
+        <span class="glyphicon glyphicon-filter"></span>
+        Sort Descending</button><br><br>
+      <div class="input-group">
+        <span class="input-group-addon font_change">Filter By name</span>
+        <input type="text" class="form-control font_change" placeholder="by name " ng-model="userVal">
+      </div>
+    </div>
+
+<!-- using same ng-repeat for three types of data-books/characters/houses and making
+their respective custom directives -->
+  <div ng-repeat="item in finalArr |orderBy:checkSort() |filter:userVal" >
+    <book-dir  ng-if="item.isbn && showingFn('book')"></book-dir>
+    <character-dir ng-if="item.gender && showingFn('characters')"></character-dir>
+    <house-dir ng-if="item.region && showingFn('houses')"></house-dir>
+  </div>

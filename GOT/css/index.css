@@ -1,0 +1,97 @@
+body{
+  background-image:linear-gradient(rgba(30, 33, 29, 0.7),rgba(37, 48, 44, 0.7)), url('../images/img.jpg');
+  opacity:0.85;
+  }
+table {
+  background-color: #f5f5f5;
+  }
+.heading-styling{
+  color:#f5f5f5
+  }
+
+.row.content {height: 1500px}
+
+  /* Set gray background color and 100% height */
+.sidenav {
+  background-color: #f1f1f1;
+  height: 100%;
+  }
+
+  /* Set black background color, white text and some padding */
+footer {
+  background-color: #555;
+  color: white;
+  padding: 15px;
+  }
+.main-area{
+  background-color: #99A3A4;
+  color:black;
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 10%
+  }
+.main-area-house{
+  background-color: #eee;
+  color:black;
+  }
+
+.main-area-character{
+  background-color: #cfd8dc;
+  color:black;
+  }
+.table-styling{
+  margin-top:15%;
+  }
+
+  /* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+    }
+  .main-area{
+    margin-left:0
+    }
+  .row.content {height: auto;}
+  }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .font_change{
+      font-size: 1.3em;
+  }
+}
+@media only screen and (min-device-width: 482px) and (max-device-width:767px){
+  .font_change{
+      font-size: 1.3em;
+  }
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .font_change{
+      font-size: 1.3em;
+  }
+}
+@media only screen and (min-device-width : 1025px) and (max-device-width : 1223px) {
+  .font_change{
+      font-size: 1.3em;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  .font_change{
+      font-size: 1.3em;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+  .font_change{
+      font-size: 1.5em;
+  }
+}
+
+table{
+   font-size: 1em;
+}

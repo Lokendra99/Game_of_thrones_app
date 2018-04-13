@@ -1,0 +1,84 @@
+<!-- detailed SPA page where 'detail' of each type of data -book/character/house is
+shown -->
+
+<!-- book detail -->
+<div class="container table-styling animated fadeInDown" ng-if=bookDetail.name!=NULL>
+  <h2 class="heading-styling text-center">Details of book</h2>
+
+  <table class="table table-responsive  table-bordered font_change">
+    <tr>
+      <td>Name:</td>
+      <td>{{bookDetail.name}}</td
+    </tr>
+    <tr>
+      <td>author</td>
+      <td>{{bookDetail.authors[0]}}</td>
+    </tr>
+    <tr>
+      <td>No.Of pages</td>
+      <td>{{bookDetail.numberOfPages}}</td>
+    </tr>
+    <tr>
+      <td>Publisher</td>
+      <td>{{bookDetail.publisher}}</td>
+    </tr>
+    <tr>
+      <td>Releasing Date</td>
+      <td>{{bookDetail.released | date}}</td>
+    </tr>
+    <tr>
+      <td>ISBN</td>
+      <td>{{bookDetail.isbn}}</td>
+    </tr>
+    <tr>
+      <td>MediaType</td>
+      <td>{{bookDetail.mediaType}}</td>
+    </tr>
+  </table>
+</div>
+
+<!-- characters detail -->
+<div class="container table-styling animated fadeInDown" ng-if=characterDetail.culture!=NULL>
+  <h2 class="heading-styling text-center">Details of character</h2>
+  <table class="table table-striped table-bordered font_change">
+    <tr>
+      <td>Aliases</td>
+      <td>{{characterDetail.aliases[0]}}</td>
+    </tr>
+    <tr>
+      <td>Culture</td>
+      <td>{{characterDetail.culture}}</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{characterDetail.gender}}</td>
+    </tr>
+  </table>
+</div>
+
+<!-- house detail -->
+<div class="container table-styling animated fadeInDown" ng-if=houseDetail.name!=NULL>
+  <h2 class="heading-styling text-center">Details of House</h2>
+  <table class="table table-striped table-bordered font_change">
+    <tr>
+      <td>Name</td>
+      <td>{{houseDetail.name}}</td>
+    </tr>
+    <tr>
+      <td>Region</td>
+      <td>{{houseDetail.region}}</td>
+    </tr>
+    <tr>
+      <td>coatOfArms</td>
+      <td>{{houseDetail.coatOfArms || 'none'}}</td>
+    </tr>
+    <tr>
+      <td>currentLord</td>
+      <td>{{houseDetail.currentLord || 'none'}}</td>
+    </tr>
+    <tr>
+      <td>seats</td>
+      <td>{{houseDetail.seats[0] || 'none'}}</td>
+    </tr>
+  </table>
+</div>

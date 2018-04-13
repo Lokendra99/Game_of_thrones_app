@@ -1,0 +1,21 @@
+gotApp.directive('bookDir',function(){
+  return{
+    restrict:'AE',
+    //replace:'true',
+    templateUrl:'views/allBook.html',
+  }
+});
+gotApp.directive('characterDir',function(){
+  return{
+    restrict:'AE',
+    //replace:'true',
+    templateUrl:'views/allCharacter.html',
+  }
+});
+gotApp.directive('houseDir',function(){
+  return{
+    restrict:'AE',
+    //replace:'true',
+    templateUrl:'views/allHouse.html',
+  }
+});

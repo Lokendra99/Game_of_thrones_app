@@ -1,0 +1,26 @@
+<!-- custom directive where all types of data -book/character/house is
+shown -->
+<div>
+  <button ng-click="checkVal('book')" >book</button>
+  <ul id="bookID" ng-repeat="data in finalArr" ng-show="data.hasOwnProperty('mediaType')"
+     ng-if="toHideOrToshow('book')" >
+    <li class="jumbotron">
+      {{data}}
+    </li>
+  </ul>
+  <h3>characters</h3>
+  <button ng-click="checkVal('characters')">characters</button>
+  <div id="characterID" ng-repeat="data in finalArr" ng-show="data.hasOwnProperty('gender')"            ng-if="toHideOrToshow('characters')">
+    <div class="jumbotron">
+      {{data}}
+    </div>
+  </div>
+  <h3>houses</h3>
+  <button ng-click="checkVal('houses')">Houses</button>
+  <div id="houseID" ng-repeat="data in finalArr" ng-show="data.hasOwnProperty('heir')" ng-if="toHideOrToshow('houses')">
+    <div class="jumbotron">
+      {{data}}
+    </div>
+  </div>
+  </div>
+</div>
